@@ -5,6 +5,10 @@
       <map>
         <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/layout/activity_login.xml" value="0.2359375" />
         <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/layout/fragment_compose.xml" value="0.2359375" />
+        <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/layout/fragment_feed.xml" value="0.2359375" />
+        <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/layout/item_post.xml" value="0.2359375" />
+        <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2359375" />
         <entry key="..\:/Users/Admin/Android_project/LuInstagram/app/src/main/res/xml/fileprovider.xml" value="0.23177083333333334" />
       </map>
     </option>

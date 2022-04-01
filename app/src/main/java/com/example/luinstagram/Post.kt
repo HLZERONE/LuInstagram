@@ -4,6 +4,7 @@ import com.parse.ParseClassName
 import com.parse.ParseFile
 import com.parse.ParseObject
 import com.parse.ParseUser
+import java.util.*
 
 @ParseClassName("Post")
 class Post : ParseObject(){
@@ -29,6 +30,14 @@ class Post : ParseObject(){
 
     fun setUser(user: ParseUser){
         put(KEY_USER, user)
+    }
+
+    fun getTime(): Date {
+        return createdAt
+    }
+
+    fun getFormattedTimestamp(): String{
+        return TimeFormatter.getTimeDifference(createdAt.toString())
     }
 
     companion object{

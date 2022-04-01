@@ -1,6 +1,7 @@
 package com.example.luinstagram
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import org.w3c.dom.Text
 
 class PostAdapter(val context: Context, val posts: MutableList<Post>): RecyclerView.Adapter<PostAdapter.ViewHolder>(){
 
@@ -29,17 +31,23 @@ class PostAdapter(val context: Context, val posts: MutableList<Post>): RecyclerV
         val tvUsername: TextView
         val ivImage: ImageView
         val tvDescription : TextView
+        val tvTime: TextView
+        val descriptionUser: TextView
 
         init {
             tvUsername = itemView.findViewById(R.id.tvUserName)
             ivImage = itemView.findViewById(R.id.ivImage)
             tvDescription = itemView.findViewById(R.id.tvDescription)
+            tvTime = itemView.findViewById(R.id.tvTime)
+            descriptionUser = itemView.findViewById(R.id.descriptionUser)
         }
 
         fun bind(post: Post){
             tvUsername.text = post.getUser()?.username
+            descriptionUser.text = post.getUser()?.username
             tvDescription.text = post.getDescription()
             Glide.with(itemView.context).load(post.getImage()?.url).into(ivImage)
+            tvTime.text = post.getFormattedTimestamp()
         }
     }
 
